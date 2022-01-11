@@ -76,7 +76,7 @@
             </header>
 
             <!-- Page Content -->
-            <main>
+            <main class="px-12">
                 <slot />
             </main>
         </div>
