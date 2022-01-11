@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,7 @@ Route::get('/', function () {
 
 Route::get('/contact-us', [ContactController::class,'index'])->name('contactus');
 Route::get('/about-us', [AboutController::class,'index'])->name('aboutus');
+Route::get('/categories', [CategoryController::class,'index'])->name('categories');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

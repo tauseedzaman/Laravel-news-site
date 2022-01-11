@@ -1,7 +1,5 @@
 <template>
-    <div>
-        <div class="min-h-screen bg-gray-100">
-            <nav class="bg-white border-b border-gray-100">
+    <nav class="bg-white border-b border-gray-100">
                 <!-- Primary Navigation Menu -->
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex justify-between h-16">
@@ -18,7 +16,8 @@
                                 <BreezeNavLink :href="route('welcome')" :active="route().current('welcome')" class="">
                                     Home
                                 </BreezeNavLink>
-                                <BreezeNavLink :href="route('cateogies')" :active="route().current('cateogies')" class="">
+
+                                <BreezeNavLink :href="route('welcome')" :active="route().current('welcome')" class="">
                                     Categories
                                 </BreezeNavLink>
                                 <BreezeNavLink :href="route('contactus')" :active="route().current('contactus')">
@@ -54,9 +53,6 @@
                         <BreezeResponsiveNavLink :href="route('welcome')" :active="route().current('welcome')">
                             Home
                         </BreezeResponsiveNavLink>
-                        <BreezeResponsiveNavLink :href="route('cateogies')" :active="route().current('cateogies')" class="">
-                                    Categories
-                                </BreezeResponsiveNavLink>
                         <BreezeResponsiveNavLink :href="route('contactus')" :active="route().current('contactus')">
                             Contact Us
                         </BreezeResponsiveNavLink>
@@ -73,44 +69,9 @@
 
                 </div>
             </nav>
-
-            <!-- Page Heading -->
-            <header class="bg-white shadow" v-if="$slots.header">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    <slot name="header" />
-                </div>
-            </header>
-
-            <!-- Page Content -->
-            <main>
-                <slot />
-            </main>
-        </div>
-    </div>
 </template>
-
 <script>
-import BreezeApplicationLogo from '@/Components/ApplicationLogo.vue'
-import BreezeDropdown from '@/Components/Dropdown.vue'
-import BreezeDropdownLink from '@/Components/DropdownLink.vue'
-import BreezeNavLink from '@/Components/NavLink.vue'
-import BreezeResponsiveNavLink from '@/Components/ResponsiveNavLink.vue'
-import { Link } from '@inertiajs/inertia-vue3';
-
 export default {
-    components: {
-        BreezeApplicationLogo,
-        BreezeDropdown,
-        BreezeDropdownLink,
-        BreezeNavLink,
-        BreezeResponsiveNavLink,
-        Link,
-    },
 
-    data() {
-        return {
-            showingNavigationDropdown: false,
-        }
-    },
 }
 </script>
