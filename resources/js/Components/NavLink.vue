@@ -1,6 +1,7 @@
 <template>
     <Link :href="href" :class="classes">
-        <slot />
+    <b><slot /></b>
+
     </Link>
 </template>
 
