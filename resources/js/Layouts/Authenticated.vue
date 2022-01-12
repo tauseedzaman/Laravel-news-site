@@ -18,6 +18,15 @@
                                 <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </BreezeNavLink>
+                                <BreezeNavLink :href="route('categories')" :active="route().current('categories')" class="">
+                                    Categories
+                                </BreezeNavLink>
+                        <BreezeNavLink :href="route('contactus')" :active="route().current('contactus')">
+                            Contact Us
+                        </BreezeNavLink>
+                        <BreezeNavLink :href="route('aboutus')" :active="route().current('aboutus')">
+                            About Us
+                        </BreezeNavLink>
                             </div>
                         </div>
 
@@ -63,6 +72,15 @@
                     <div class="pt-2 pb-3 space-y-1">
                         <BreezeResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                             Dashboard
+                        </BreezeResponsiveNavLink>
+                         <BreezeResponsiveNavLink :href="route('categories')" :active="route().current('categories')" class="">
+                                    Categories
+                                </BreezeResponsiveNavLink>
+                        <BreezeResponsiveNavLink :href="route('contactus')" :active="route().current('contactus')">
+                            Contact Us
+                        </BreezeResponsiveNavLink>
+                        <BreezeResponsiveNavLink :href="route('aboutus')" :active="route().current('aboutus')">
+                            About Us
                         </BreezeResponsiveNavLink>
                     </div>
 

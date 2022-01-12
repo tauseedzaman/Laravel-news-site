@@ -26,7 +26,10 @@ class DatabaseSeeder extends Seeder
                 'email' => "tauseedzaman@test.com",
                 'password' => Hash::make('password')
             ]);
+
         }
+        $this->call(CategorySeeder::class);
+        $this->call(PostsSeeder::class);
 
         // \App\Models\User::factory(10)->create();
     }

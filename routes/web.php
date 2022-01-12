@@ -18,8 +18,10 @@ Route::get('/', function () {
 })->name('welcome');
 
 Route::get('/contact-us', [ContactController::class,'index'])->name('contactus');
+Route::post('/contact-us', [ContactController::class,'store'])->name('contactus.store');
 Route::get('/about-us', [AboutController::class,'index'])->name('aboutus');
 Route::get('/categories', [CategoryController::class,'index'])->name('categories');
+Route::get('/categories/{category}', [CategoryController::class,'show'])->name('category_posts');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

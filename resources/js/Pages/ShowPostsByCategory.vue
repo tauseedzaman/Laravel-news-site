@@ -1,10 +1,10 @@
 <template>
-    <Head title="Categories" />
+    <Head title="Posts" />
 
     <BreezeAuthenticatedLayout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Categories
+                Posts
             </h2>
         </template>
 
@@ -12,11 +12,15 @@
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 bg-white border-b border-gray-200">
-                        <ul class="bg-gray-900 ">
-                            <li v-for="category in categories" :key="category.id" class="my-2 px-3 shadow border border-separate rounded-md py-2">
-                                <Link :href="route('category_posts',category)" >{{ category.name }} <span class="float-right">(1000 Posts)</span> </Link>
-                            </li>
-                        </ul>
+                        <div>
+                            <h1>
+                            Hello title
+                            </h1>
+                            <p>
+     * Show the form for creating a new resource. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nisi velit sed? Ex eos facilis sunt fuga. Tenetur eligendi accusantium rem corrupti dignissimos cumque amet quasi exercitationem non sapiente? Facere!
+                            Lorem
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -30,7 +34,7 @@ import { Head,Link } from '@inertiajs/inertia-vue3';
 
 export default {
     props:{
-        categories:Object,
+        posts:Object,
     },
     components: {
         BreezeAuthenticatedLayout,

@@ -16,7 +16,10 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return Inertia::render('categories');
+        // dd(category::first()->with('posts'));
+        return Inertia::render('Categories',[
+            'categories' => category::all()
+        ]);
     }
 
     /**
@@ -48,7 +51,9 @@ class CategoryController extends Controller
      */
     public function show(category $category)
     {
-        //
+        return Inertia::render("ShowPostsByCategory",[
+            'posts' => $category
+        ]);
     }
 
     /**
