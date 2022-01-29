@@ -18,7 +18,7 @@
                                 <BreezeNavLink :href="route('welcome')" :active="route().current('welcome')" class="">
                                     Home
                                 </BreezeNavLink>
-                                <BreezeNavLink :href="route('cateogies')" :active="route().current('cateogies')" class="">
+                                <BreezeNavLink :href="route('categories')" :active="route().current('cateogies')" class="">
                                     Categories
                                 </BreezeNavLink>
                                 <BreezeNavLink :href="route('contactus')" :active="route().current('contactus')">
@@ -54,7 +54,7 @@
                         <BreezeResponsiveNavLink :href="route('welcome')" :active="route().current('welcome')">
                             Home
                         </BreezeResponsiveNavLink>
-                        <BreezeResponsiveNavLink :href="route('cateogies')" :active="route().current('cateogies')" class="">
+                        <BreezeResponsiveNavLink :href="route('categories')" :active="route().current('cateogies')" class="">
                                     Categories
                                 </BreezeResponsiveNavLink>
                         <BreezeResponsiveNavLink :href="route('contactus')" :active="route().current('contactus')">
@@ -87,6 +87,7 @@
             </main>
         </div>
     </div>
+    <Footer />
 </template>
 
 <script>
@@ -94,6 +95,7 @@ import BreezeApplicationLogo from '@/Components/ApplicationLogo.vue'
 import BreezeDropdown from '@/Components/Dropdown.vue'
 import BreezeDropdownLink from '@/Components/DropdownLink.vue'
 import BreezeNavLink from '@/Components/NavLink.vue'
+import Footer from '@/Components/Footer.vue'
 import BreezeResponsiveNavLink from '@/Components/ResponsiveNavLink.vue'
 import { Link } from '@inertiajs/inertia-vue3';
 
@@ -103,6 +105,7 @@ export default {
         BreezeDropdown,
         BreezeDropdownLink,
         BreezeNavLink,
+        Footer,
         BreezeResponsiveNavLink,
         Link,
     },

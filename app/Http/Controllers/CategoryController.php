@@ -55,7 +55,6 @@ class CategoryController extends Controller
             'posts' => $category
         ]);
     }
-
     /**
      * Show the form for editing the specified resource.
      *
