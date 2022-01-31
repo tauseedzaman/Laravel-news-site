@@ -14,8 +14,11 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
+        $categoies = ['HTML','CSS','JS','PHP','PYTHON','LARAVEL'];
         if (category::count() == 0) {
-            category::create(['name' => "Sports"]);
+            foreach($categoies as $cat){
+            category::create(['name' =>$cat]);
         }
+    }
     }
 }

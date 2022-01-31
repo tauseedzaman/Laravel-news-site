@@ -15,12 +15,15 @@ class PostsSeeder extends Seeder
     public function run()
     {
         if (posts::count() == 0) {
-            posts::create([
-                'title' => "Hello this is just a test posts",
-                'description' => "Yeah so what's up every body this is going to be a post just for testing our service ",
-                'user_id' => 1,
-                'category_id' => 1,
-            ]);
+            for ($i=0; $i < 10; $i++) {
+                posts::create([
+                    'title' => "Hello this is just a test posts",
+                    'description' => "Yeah so what's up every body this is going to be a post just for testing our service ",
+                    'image' => "images/shop_09.jpg",
+                    'user_id' => 1,
+                    'category_id' => rand(0,5),
+                ]);
+            }
         }
     }
 }

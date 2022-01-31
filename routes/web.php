@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
+use App\Models\posts;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -12,8 +13,7 @@ Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
-        // 'laravelVersion' => Application::VERSION,
-        // 'phpVersion' => PHP_VERSION,
+        'posts' => posts::latest()->paginate(50)
     ]);
 })->name('welcome');
 
