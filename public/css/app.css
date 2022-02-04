@@ -794,6 +794,26 @@ select {
 .h-64 {
   height: 16rem;
 }
+.h-96 {
+  height: 24rem;
+}
+.h-2\/4 {
+  height: 50%;
+}
+.h-1\/4 {
+  height: 25%;
+}
+.h-3\/4 {
+  height: 75%;
+}
+.h-fit {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.max-h-6 {
+  max-height: 1.5rem;
+}
 .min-h-screen {
   min-height: 100vh;
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\posts;
 use App\Http\Requests\StorepostsRequest;
 use App\Http\Requests\UpdatepostsRequest;
+use Inertia\Inertia;
 
 class PostsController extends Controller
 {
@@ -42,12 +43,13 @@ class PostsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\posts  $posts
      * @return \Illuminate\Http\Response
      */
-    public function show(posts $posts)
+    public function show($slug)
     {
-        //
+        return Inertia::render('Post',[
+            'post' => posts::where('slug',$slug)->with(['category','author','comments'])->first()
+        ]);
     }
 
     /**
