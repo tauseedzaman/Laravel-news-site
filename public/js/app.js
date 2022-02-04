@@ -22422,7 +22422,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: {
+    comments: Object
+  },
+  mounted: function mounted() {
+    console.log(this.comments);
+  }
+});
 
 /***/ }),
 
@@ -22495,7 +22502,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony import */ var _Components_ValidationErrors_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Components/ValidationErrors.vue */ "./resources/js/Components/ValidationErrors.vue");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    BreezeValidationErrors: _Components_ValidationErrors_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  props: {
+    post_id: Number
+  },
+  data: function data() {
+    return {
+      form: this.$inertia.form({
+        comment: '',
+        post_id: this.post_id
+      })
+    };
+  },
+  methods: {
+    submit: function submit() {
+      var _this = this;
+
+      this.form.post(this.route('comment'), {
+        onFinish: function onFinish() {
+          return _this.form.comment = "";
+        }
+      });
+    }
+  }
+});
 
 /***/ }),
 
@@ -23482,13 +23517,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+var _hoisted_1 = {
+  "class": "container font-sans bg-green-100 rounded mt-8 p-4 md:p-24 text-center"
+};
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"container font-sans bg-green-100 rounded mt-8 p-4 md:p-24 text-center\"><h2 class=\"font-bold break-normal text-2xl md:text-4xl\">Subscribe to ZeeNews</h2><h3 class=\"font-bold break-normal font-normal text-gray-600 text-base md:text-xl\">Get the latest posts delivered right to your inbox</h3><div class=\"w-full text-center pt-4\"><form action=\"#\"><div class=\"max-w-xl mx-auto p-1 pr-0 flex flex-wrap items-center\"><input type=\"email\" placeholder=\"youremail@example.com\" class=\"flex-1 appearance-none rounded shadow p-3 text-gray-600 mr-2 focus:outline-none\"><button type=\"submit\" class=\"flex-1 mt-4 md:mt-0 block md:inline-block appearance-none bg-green-500 text-white text-base font-semibold tracking-wider uppercase py-4 rounded shadow hover:bg-green-400\">Subscribe</button></div></form></div></div>", 1);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h2 class=\"font-bold break-normal text-2xl md:text-4xl\"> Subscribe to ZeeNews </h2><h3 class=\"font-bold break-normal font-normal text-gray-600 text-base md:text-xl\"> Get the latest posts delivered right to your inbox </h3><div class=\"w-full text-center pt-4\"><form action=\"#\"><div class=\"max-w-xl mx-auto p-1 pr-0 flex flex-wrap items-center\"><input type=\"email\" placeholder=\"youremail@example.com\" class=\"flex-1 appearance-none rounded shadow p-3 text-gray-600 mr-2 focus:outline-none\"><button type=\"submit\" class=\"flex-1 mt-4 md:mt-0 block md:inline-block appearance-none bg-green-500 text-white text-base font-semibold tracking-wider uppercase py-4 rounded shadow hover:bg-green-400\"> Subscribe </button></div></form></div>", 3);
 
+var _hoisted_5 = [_hoisted_2];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Subscribe"), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" /Subscribe")], 2112
-  /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
-  );
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, _hoisted_5);
 }
 
 /***/ }),
@@ -23592,11 +23629,53 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"container font-sans bg-green-100 rounded mt-8 p-4 md:p-24 text-center\"><h2 class=\"font-bold break-normal text-2xl md:text-4xl\">Subscribe to ZeeNews</h2><h3 class=\"font-bold break-normal font-normal text-gray-600 text-base md:text-xl\">Get the latest posts delivered right to your inbox</h3><div class=\"w-full text-center pt-4\"><form action=\"#\"><div class=\"max-w-xl mx-auto p-1 pr-0 flex flex-wrap items-center\"><input type=\"email\" placeholder=\"youremail@example.com\" class=\"flex-1 appearance-none rounded shadow p-3 text-gray-600 mr-2 focus:outline-none\"><button type=\"submit\" class=\"flex-1 mt-4 md:mt-0 block md:inline-block appearance-none bg-green-500 text-white text-base font-semibold tracking-wider uppercase py-4 rounded shadow hover:bg-green-400\">Subscribe</button></div></form></div></div>", 1);
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", {
+  "class": "font-bold break-normal font-normal text-gray-600 md:text-xl"
+}, " Leave a comments ", -1
+/* HOISTED */
+);
+
+var _hoisted_2 = {
+  "class": "container font-sans bg-green-100 rounded mt-1 p-2 w-full md:p-12 text-center"
+};
+var _hoisted_3 = {
+  "class": "w-full text-center pt-4"
+};
+var _hoisted_4 = {
+  "class": "max-w-xl mx-auto p-1 pr-0 flex items-center"
+};
+
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  type: "submit",
+  "class": "mt-4 md:mt-0 mx-auto block px-12 appearance-none bg-green-500 text-white text-base font-semibold tracking-wider uppercase py-4 rounded shadow hover:bg-green-400"
+}, " Comment ", -1
+/* HOISTED */
+);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Subscribe"), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" /Subscribe")], 2112
-  /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
+  var _component_BreezeValidationErrors = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("BreezeValidationErrors");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BreezeValidationErrors, {
+    "class": "mb-4"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+    onSubmit: _cache[1] || (_cache[1] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+      return $options.submit && $options.submit.apply($options, arguments);
+    }, ["prevent"]))
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
+    "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
+      return $data.form.comment = $event;
+    }),
+    placeholder: "Enter Your Message",
+    id: "comment",
+    cols: "120",
+    rows: "10",
+    "class": "rounded shadow text-gray-600 mr-2 focus:outline-none"
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.comment]])]), _hoisted_5], 32
+  /* HYDRATE_EVENTS */
+  )])])], 64
+  /* STABLE_FRAGMENT */
   );
 }
 
@@ -25984,7 +26063,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       /* PROPS */
       , _hoisted_15), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.post.created_at), 1
       /* TEXT */
-      )])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Comments), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Allcomments, {
+      )])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Comments, {
+        post_id: $props.post.id
+      }, null, 8
+      /* PROPS */
+      , ["post_id"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Allcomments, {
         comments: $props.post.comments
       }, null, 8
       /* PROPS */

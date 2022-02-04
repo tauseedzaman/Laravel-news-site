@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PostsController;
 use App\Models\category;
@@ -29,6 +30,7 @@ Route::middleware(['auth'])->group(function () {
     })->name('welcome');
 
     Route::get('/posts/{slug}', [PostsController::class,'show'])->name('post');
+    Route::post('/comment', [CommentsController::class,'store'])->name('comment');
     Route::get('/categories', [CategoryController::class,'index'])->name('categories');
     Route::get('/categories/{cat}', [CategoryController::class,'show'])->name('category_posts');
 
