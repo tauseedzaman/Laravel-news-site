@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\category;
 use App\Http\Requests\StorecategoryRequest;
 use App\Http\Requests\UpdatecategoryRequest;
+use App\Models\posts;
 use Inertia\Inertia;
 
 class CategoryController extends Controller
@@ -18,7 +19,7 @@ class CategoryController extends Controller
     {
         // dd(category::first()->with('posts'));
         return Inertia::render('Categories',[
-            'categories' => category::all()
+            'categories' => category::latest()->with('posts')->get()
         ]);
     }
 
@@ -46,13 +47,13 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(category $category)
+    public function show($cat)
     {
+        // dd(posts::where('category_id',$cat)->get());
         return Inertia::render("ShowPostsByCategory",[
-            'posts' => $category
+            'posts' => posts::where('category_id',$cat)->with(['category','author'])->get()
         ]);
     }
     /**

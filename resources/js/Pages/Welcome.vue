@@ -3,59 +3,57 @@
 
   <GuestLayout>
     <template #header>
-      <h2 class="font-semibold text-xl text-gray-800 leading-tight">Welcome</h2>
+      <h2 class="text-xl font-semibold leading-tight text-gray-800">Welcome</h2>
     </template>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div class=" overflow-hidden shadow-sm sm:rounded-lg">
-        		<div class="container px-4 md:px-0 max-w-6xl mx-auto mt-32">
+        <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="overflow-hidden shadow-sm sm:rounded-lg">
+        		<div class="container max-w-6xl px-4 mx-auto mt-32 md:px-0">
 
 
 			<div class="">
 
-				<div class=" w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t">
+				<div class="w-full text-xl leading-normal text-gray-800 rounded-t md:text-2xl">
 
 
 				<!--Posts Container-->
 				<div class="flex flex-wrap justify-between pt-4 -mx-6">
 
                     <!-- trend post -->
-                    <div class="w-full  p-6 flex flex-col flex-grow flex-shrink">
-						<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-							<a href="#" class="flex flex-wrap no-underline hover:no-underline">
-								<img src="https://source.unsplash.com/collection/1118905/800x600" class="h-full w-full rounded-t pb-6">
-								<p class="w-full text-gray-600 text-xs md:text-sm px-6">GETTING STARTED</p>
-								<div class="w-full font-bold text-xl text-gray-900 px-6">Lorem ipsum dolor sit amet.</div>
-								<p class="text-gray-800 font-serif text-base px-6 mb-5">
-									Lorem ipsum eu nunc commodo posuere et sit amet ligula.
-								</p>
+                    <div class="flex flex-col flex-grow flex-shrink w-full p-6">
+						<div class="flex-1 overflow-hidden bg-white rounded-t rounded-b-none shadow-lg">
+							<a :href="posts[0].slug" class="flex flex-wrap no-underline hover:no-underline">
+								<img :src="posts[0].image" class="w-full h-full pb-6 rounded-t">
+								<p class="w-full px-6 text-xs text-gray-600 md:text-sm">{{ posts[0].category.name }}</p>
+								<div class="w-full px-6 text-xl font-bold text-gray-900">{{ posts[0].title }}</div>
+								<p class="px-6 mb-5 font-serif text-base text-gray-800">{{ posts[0].description }}</p>
 							</a>
 						</div>
-						<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+						<div class="flex-none p-6 mt-auto overflow-hidden bg-white rounded-t-none rounded-b shadow-lg">
 							<div class="flex items-center justify-between">
-								<img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author">
-								<p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+								<!-- <img class="w-8 h-8 mr-4 rounded-full avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author"> -->
+								<p class="text-xs text-gray-600 md:text-sm">1 MIN READ</p>
 							</div>
 						</div>
 					</div>
 
 					<!--1/3 col -->
-					<div v-for="post in posts"  :key="post.id" class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-						<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-							<a href="post.id" class="flex flex-wrap no-underline hover:no-underline">
-								<img src="https://source.unsplash.com/collection/225/800x600" class="h-64 w-full rounded-t pb-6">
-								<p class="w-full text-gray-600 text-xs md:text-sm px-6">GETTING STARTED</p>
-								<div class="w-full font-bold text-xl text-gray-900 px-6">{{ post.title }}</div>
-								<p class="text-gray-800 font-serif text-base px-6 mb-5">
+					<div v-for="(post,index) in posts"  :key="post.id" class="flex flex-col flex-grow flex-shrink w-full p-6 md:w-1/3">
+						<div class="flex-1 overflow-hidden bg-white rounded-t rounded-b-none shadow-lg">
+							<a :href="post.slug" class="flex flex-wrap no-underline hover:no-underline">
+								<img :src="post.image" class="w-full h-64 pb-6 rounded-t">
+								<p class="w-full px-6 text-xs text-gray-600 md:text-sm">{{ post.category }}</p>
+								<div class="w-full px-6 text-xl font-bold text-gray-900">{{ post.title }}</div>
+								<p class="px-6 mb-5 font-serif text-base text-gray-800">
 									{{ post.description }}
 								</p>
 							</a>
 						</div>
-						<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+						<div class="flex-none p-6 mt-auto overflow-hidden bg-white rounded-t-none rounded-b shadow-lg">
 							<div class="flex items-center justify-between">
-								<img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author">
-								<p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+								<img class="w-8 h-8 mr-4 rounded-full avatar" data-tippy-content="Author Name" :src="post.author.image" :alt="post.author.name">
+								<p class="text-xs text-gray-600 md:text-sm">{{ post.created_at }}</p>
 							</div>
 						</div>
 					</div>
@@ -84,7 +82,7 @@ export default {
     Head,
     Subscribe,
   },
-  props(){
+  props:{
       posts:Object
   },
   mounted() {
