@@ -30,6 +30,7 @@ Route::middleware(['auth'])->group(function () {
     })->name('welcome');
 
     Route::get('/posts/{slug}', [PostsController::class,'show'])->name('post');
+    Route::get('/post-comment/{post_id}', [CommentsController::class,'show'])->name('post-comments');
     Route::post('/comment', [CommentsController::class,'store'])->name('comment');
     Route::get('/categories', [CategoryController::class,'index'])->name('categories');
     Route::get('/categories/{cat}', [CategoryController::class,'show'])->name('category_posts');

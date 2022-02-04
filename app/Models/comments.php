@@ -21,7 +21,7 @@ class comments extends Model
      */
     public function user(): BelongsTo
     {
-        return $this->belongsTo(User::class,'id', 'user_id');
+        return $this->belongsTo(User::class, 'user_id','id');
     }
 
 
@@ -32,7 +32,7 @@ class comments extends Model
      */
     public function post(): BelongsTo
     {
-        return $this->belongsTo(post::class,'id', 'post_id');
+        return $this->belongsTo(post::class, 'post_id','id');
     }
 
     use HasFactory;

@@ -62,7 +62,7 @@
               </div>
             </div>
             <Comments :post_id="post.id" />
-            <Allcomments :comments="post.comments" />
+            <Allcomments :post_id="post.id" />
           </div>
         </div>
       </div>
