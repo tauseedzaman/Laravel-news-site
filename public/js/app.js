@@ -26185,39 +26185,38 @@ var _hoisted_14 = {
 var _hoisted_15 = {
   "class": "px-6 mb-5 font-serif text-base text-gray-800"
 };
-
-var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_16 = {
   "class": "flex-none p-6 mt-auto overflow-hidden bg-white rounded-t-none rounded-b shadow-lg"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "flex items-center justify-between"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <img class=\"w-8 h-8 mr-4 rounded-full avatar\" data-tippy-content=\"Author Name\" src=\"http://i.pravatar.cc/300\" alt=\"Avatar of Author\"> "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": "text-xs text-gray-600 md:text-sm"
-}, "1 MIN READ")])], -1
-/* HOISTED */
-);
-
+};
 var _hoisted_17 = {
+  "class": "flex items-center justify-between"
+};
+var _hoisted_18 = ["src"];
+var _hoisted_19 = {
+  "class": "text-xs text-gray-600 md:text-sm"
+};
+var _hoisted_20 = {
   "class": "flex-1 overflow-hidden bg-white rounded-t rounded-b-none shadow-lg"
 };
-var _hoisted_18 = ["href"];
-var _hoisted_19 = ["src"];
-var _hoisted_20 = {
+var _hoisted_21 = ["href"];
+var _hoisted_22 = ["src"];
+var _hoisted_23 = {
   "class": "w-full px-6 text-xs text-gray-600 md:text-sm"
 };
-var _hoisted_21 = {
+var _hoisted_24 = {
   "class": "w-full px-6 text-xl font-bold text-gray-900"
 };
-var _hoisted_22 = {
+var _hoisted_25 = {
   "class": "px-6 mb-5 font-serif text-base text-gray-800"
 };
-var _hoisted_23 = {
+var _hoisted_26 = {
   "class": "flex-none p-6 mt-auto overflow-hidden bg-white rounded-t-none rounded-b shadow-lg"
 };
-var _hoisted_24 = {
+var _hoisted_27 = {
   "class": "flex items-center justify-between"
 };
-var _hoisted_25 = ["src", "alt"];
-var _hoisted_26 = {
+var _hoisted_28 = ["src", "alt"];
+var _hoisted_29 = {
   "class": "text-xs text-gray-600 md:text-sm"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -26250,11 +26249,20 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       /* TEXT */
       )], 8
       /* PROPS */
-      , _hoisted_11)]), _hoisted_16]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("1/3 col "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.posts, function (post, index) {
+      , _hoisted_11)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+        "class": "w-8 h-8 mr-4 rounded-full avatar",
+        "data-tippy-content": "Author Name",
+        src: 'http://127.0.0.1:8000/' + $props.posts[0].author.image,
+        alt: "Avatar of Author"
+      }, null, 8
+      /* PROPS */
+      , _hoisted_18), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.posts[0].created_at), 1
+      /* TEXT */
+      )])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("1/3 col "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.posts, function (post, index) {
         return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
           key: post.id,
-          "class": "flex flex-col flex-grow flex-shrink w-full p-6 md:w-1/3"
-        }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+          "class": "flex flex-col flex-shrink w-full p-6 md:w-1/3"
+        }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
           href: post.slug,
           "class": "flex flex-wrap no-underline hover:no-underline"
         }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
@@ -26262,22 +26270,22 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           "class": "w-full h-64 pb-6 rounded-t"
         }, null, 8
         /* PROPS */
-        , _hoisted_19), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.category), 1
+        , _hoisted_22), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.category != null ? post.category.name : "-"), 1
         /* TEXT */
-        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.title), 1
+        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.title), 1
         /* TEXT */
-        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.description), 1
+        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.description), 1
         /* TEXT */
         )], 8
         /* PROPS */
-        , _hoisted_18)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+        , _hoisted_21)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
           "class": "w-8 h-8 mr-4 rounded-full avatar",
           "data-tippy-content": "Author Name",
           src: post.author.image,
           alt: post.author.name
         }, null, 8
         /* PROPS */
-        , _hoisted_25), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_26, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.created_at), 1
+        , _hoisted_28), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.created_at), 1
         /* TEXT */
         )])])]);
       }), 128
