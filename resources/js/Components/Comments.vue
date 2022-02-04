@@ -20,14 +20,14 @@
       mt-1
       p-2
       w-full
-      md:p-12
+      md:p-4
       text-center
     "
   >
         <BreezeValidationErrors class="mb-4" />
     <div class="w-full text-center pt-4">
       <form @submit.prevent="submit">
-        <div class="max-w-xl mx-auto p-1 pr-0 flex  items-center">
+        <div class=" mx-auto p-1 pr-0 flex  items-center">
 
           <textarea
           v-model="form.comment"
@@ -37,6 +37,7 @@
             class="
               rounded
               shadow
+              w-full
               text-gray-600
               mr-2
               focus:outline-none
@@ -48,7 +49,7 @@
             class="
               mt-4
               md:mt-0
-              mx-auto
+              ml-auto
               block
               px-12
               appearance-none

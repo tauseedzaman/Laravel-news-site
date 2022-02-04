@@ -815,6 +815,15 @@ select {
   height: -moz-fit-content;
   height: fit-content;
 }
+.h-2\/3 {
+  height: 66.666667%;
+}
+.h-screen {
+  height: 100vh;
+}
+.h-1\/6 {
+  height: 16.666667%;
+}
 .max-h-6 {
   max-height: 1.5rem;
 }
@@ -1672,6 +1681,10 @@ select {
 
   .md\:p-12 {
     padding: 3rem;
+  }
+
+  .md\:p-4 {
+    padding: 1rem;
   }
 
   .md\:px-0 {

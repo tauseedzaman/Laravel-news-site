@@ -24,7 +24,7 @@
                     <div class="flex flex-col flex-grow flex-shrink w-full p-6">
 						<div class="flex-1 overflow-hidden bg-white rounded-t rounded-b-none shadow-lg">
 							<a :href="posts[0].slug" class="flex flex-wrap no-underline hover:no-underline">
-								<img :src="posts[0].image" class="w-full h-full pb-6 rounded-t">
+								<img :src="posts[0].image" class="w-full h-screen pb-6 rounded-t">
 								<p class="w-full px-6 text-xs text-gray-600 md:text-sm">{{ posts[0].category.name }}</p>
 								<div class="w-full px-6 text-xl font-bold text-gray-900">{{ posts[0].title }}</div>
 								<p class="px-6 mb-5 font-serif text-base text-gray-800">{{ posts[0].description }}</p>
@@ -88,7 +88,6 @@ export default {
       posts:Object
   },
   mounted() {
-	  console.log(this.posts);
   },
 };
 </script>

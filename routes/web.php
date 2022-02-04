@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\SubscriberController;
 use App\Models\category;
 use App\Models\posts;
 use Illuminate\Foundation\Application;
@@ -36,7 +37,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/categories/{cat}', [CategoryController::class,'show'])->name('category_posts');
 
 });
-
+Route::post('/subscribe-news',[SubscriberController::class,'store'])->name('subscribe');
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
