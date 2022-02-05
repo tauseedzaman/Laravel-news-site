@@ -39,7 +39,7 @@
 					</div>
 
 					<!--1/3 col -->
-					<div v-for="(post,index) in posts"  :key="post.id" class="flex flex-col  flex-shrink w-full p-6 md:w-1/3">
+					<div v-for="(post,index) in posts"  :key="post.id" class="flex flex-col flex-shrink w-full p-6 md:w-1/3">
 						<div class="flex-1 overflow-hidden bg-white rounded-t rounded-b-none shadow-lg">
 							<a :href="route('post',post.slug)" class="flex flex-wrap no-underline hover:no-underline">
 								<img :src="post.image" class="w-full h-64 pb-6 rounded-t">
