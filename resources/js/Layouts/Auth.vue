@@ -156,11 +156,10 @@
           <div class="w-24 mx-auto"><BreezeApplicationLogo /></div>
           <slot />
         </div>
-      <!-- <Footer /> -->
       </main>
     </div>
   </div>
-  <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos debitis consectetur porro, ratione blanditiis animi! Repudiandae laborum velit eum, ea, error quod, reprehenderit sit eaque possimus tenetur explicabo ex culpa?</h1>
+      <Footer />
 </template>
 
 <script>

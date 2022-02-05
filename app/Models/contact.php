@@ -5,8 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class faq extends Model
+class contact extends Model
 {
     use HasFactory;
-    protected $fillable=['question','answer'];
+
+    protected $fillable=[
+        'name',
+        'email',
+        'message'
+    ];
 }
