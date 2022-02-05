@@ -6,15 +6,9 @@ use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\SubscriberController;
-use App\Models\category;
 use App\Models\posts;
-use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-
-
-
-
 
 Route::middleware(['auth'])->group(function () {
 
@@ -45,9 +39,6 @@ Route::middleware(['guest'])->group(function () {
     })->name('welcome');
 });
 
-
-
 Route::post('/subscribe-news',[SubscriberController::class,'store'])->name('subscribe');
-
 
 require __DIR__.'/auth.php';
