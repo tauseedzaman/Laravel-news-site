@@ -15,7 +15,7 @@ This is a simple News/Bloging Website Build Using Vue and Inertia with Laravel.
 9. [Open https://127.0.0.1:8000](http://127.0.0.1:8000).
 
 ## Demo
-<a href="Demo-ZeeNews.pdf">View Demo</a>
+<a href="./Demo-ZeeNews.pdf">View Demo</a>
 
 ## Learning Laravel
 
