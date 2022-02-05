@@ -4,8 +4,8 @@ This is a simple News/Bloging Website Build Using Vue and Inertia with Laravel.
 
 
 ## Quick Start
-1. git clone https://github.com/tauseedzaman/Laravel-News-Site.git
-2. cd Laravel-News-Site
+1. git clone https://github.com/tauseedzaman/Laravel-news-site.git
+2. cd Laravel-news-site
 3. cp .env.example .env
 4. composer install
 5. php artisan key:generate
@@ -14,7 +14,8 @@ This is a simple News/Bloging Website Build Using Vue and Inertia with Laravel.
 8. php artisan serve
 9. [Open https://127.0.0.1:8000](http://127.0.0.1:8000).
 
-
+## Demo
+<a href="Demo-ZeeNews.pdf">View Demo</a>
 
 ## Learning Laravel
 
