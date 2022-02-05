@@ -1,9 +1,9 @@
 <template>
-  <Head title="Dashboard" />
+  <Head title="Home" />
 
   <BreezeAuthenticatedLayout>
     <template #header>
-      <h2 class="text-xl font-semibold leading-tight text-gray-800">Welcome</h2>
+      <h2 class="text-xl font-semibold leading-tight text-gray-800">Home</h2>
     </template>
 
     <div class="py-12">
@@ -21,7 +21,7 @@
                     <div
                       class="flex-1 overflow-hidden bg-white rounded-t rounded-b-none shadow-lg "
                     >
-                      <a
+                      <Link
                         :href="posts[0].slug"
                         class="flex flex-wrap no-underline hover:no-underline"
                       >
@@ -40,7 +40,7 @@
                         <p class="px-6 mb-5 font-serif text-base text-gray-800">
                           {{ posts[0].description }}
                         </p>
-                      </a>
+                      </Link>
                     </div>
                     <div
                       class="flex-none p-6 mt-auto overflow-hidden bg-white rounded-t-none rounded-b shadow-lg "
@@ -70,7 +70,7 @@
                     <div
                       class="flex-1 overflow-hidden bg-white rounded-t rounded-b-none shadow-lg "
                     >
-                      <a
+                      <Link
                         :href="route('post', post.slug)"
                         class="flex flex-wrap no-underline hover:no-underline"
                       >
@@ -89,7 +89,7 @@
                         <p class="px-6 mb-5 font-serif text-base text-gray-800">
                           {{ post.description }}
                         </p>
-                      </a>
+                      </Link>
                     </div>
                     <div
                       class="flex-none p-6 mt-auto overflow-hidden bg-white rounded-t-none rounded-b shadow-lg "
@@ -138,13 +138,14 @@
 
 <script>
 import BreezeAuthenticatedLayout from "@/Layouts/Authenticated.vue";
-import { Head } from "@inertiajs/inertia-vue3";
+import { Head,Link } from "@inertiajs/inertia-vue3";
 import Subscribe from "@/Components/Subscribe.vue";
 
 export default {
   components: {
     BreezeAuthenticatedLayout,
     Head,
+    Link,
     Subscribe,
   },
   props: {
