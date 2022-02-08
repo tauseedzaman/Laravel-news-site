@@ -26,7 +26,7 @@
 						<div class="flex-none p-6 mt-auto overflow-hidden bg-white rounded-t-none rounded-b shadow-lg">
 							<div class="flex items-center justify-between">
 								<img class="w-8 h-8 mr-4 rounded-full avatar" data-tippy-content="Author Name" :src="'http://127.0.0.1:8000/'+post.author.image" :alt="post.author.name">
-								<p class="text-xs text-gray-600 md:text-sm">{{ post.created_at }}</p>
+								<p class="text-xs text-gray-600 md:text-sm">{{ new Date(post.created_at).toDateString() }}</p>
 							</div>
 						</div>
 					</div>

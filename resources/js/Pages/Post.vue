@@ -55,7 +55,7 @@
                       alt="Avatar of Author"
                     />
                     <p class="text-xs text-gray-600 md:text-sm">
-                      {{ post.created_at }}
+                      {{ new Date(post.created_at).toDateString() }}
                     </p>
                   </div>
                 </div>

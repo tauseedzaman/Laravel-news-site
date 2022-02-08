@@ -30,7 +30,7 @@
         {{ comment.content }}
       </p>
       <p class="text-xs text-gray-600 text-right md:text-sm">
-        {{ comment.created_at }}
+        {{ new Date(comment.created_at).toDateString() }}
       </p>
     </div>
   </div>
