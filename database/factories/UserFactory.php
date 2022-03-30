@@ -26,7 +26,7 @@ class UserFactory extends Factory
             {
                 return role::factory()->create()->id;
             },
-            'image' => "images/shop_09.jpg",
+            'image' => "images/shop_09.png",
         ];
     }
 

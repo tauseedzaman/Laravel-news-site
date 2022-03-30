@@ -20,7 +20,7 @@ class PostsFactory extends Factory
             'title' => $title,
             'slug' => Str::slug($title),
             'description' => $this->faker->paragraph(4),
-            'image' => "images/shop_09.jpg",
+            'image' => "images/shop_09.png",
             'user_id' => function ()
             {
                 return User::factory()->create()->id;
